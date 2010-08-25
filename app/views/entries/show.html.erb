@@ -1,0 +1,83 @@
+<p>
+  <b>Title:</b>
+  <%=h @entry.title %>
+</p>
+
+<p>
+  <b>Blurb:</b>
+  <%=h @entry.blurb %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @entry.body %>
+</p>
+
+<p>
+  <b>Author source:</b>
+  <%=h @entry.author_source %>
+</p>
+
+<p>
+  <b>Writer:</b>
+  <%=h @entry.writer_id %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%=h @entry.source_id %>
+</p>
+
+<p>
+  <b>Assigned to:</b>
+  <%=h @entry.assigned_to %>
+</p>
+
+<p>
+  <b>Is locked:</b>
+  <%=h @entry.is_locked %>
+</p>
+
+<p>
+  <b>Is published:</b>
+  <%=h @entry.is_published %>
+</p>
+
+<p>
+  <b>Published date:</b>
+  <%=h @entry.published_date %>
+</p>
+
+<p>
+  <b>Assigned date:</b>
+  <%=h @entry.assigned_date %>
+</p>
+
+<p>
+  <b>Log:</b>
+  <%=h @entry.log %>
+</p>
+
+<p>
+  <b>Is ok to publish:</b>
+  <%=h @entry.is_ok_to_publish %>
+</p>
+
+<p>
+  <b>Editor:</b>
+  <%=h @entry.editor_id %>
+</p>
+
+<p>
+  <b>Publisher:</b>
+  <%=h @entry.publisher_id %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%=h @entry.category_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Back', entries_path %>

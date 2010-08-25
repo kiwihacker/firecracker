@@ -1,0 +1,49 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  lname: MyString
+  fname: MyString
+  lname_yomi: MyString
+  fname_yomi: MyString
+  lname_eng: MyString
+  fname_eng: MyString
+  username: MyString
+  email: MyString
+  role: MyString
+  added_by: 1
+  locked: false
+  locked_reason: MyString
+  locked_date: 2010-08-22
+  log: MyText
+  type: MyString
+  passwd_encr: MyString
+  passwd_set: 2010-08-22
+  reset_passwd: false
+  last_login: 2010-08-22
+  active: false
+  inactive_reason: MyString
+  inactive_date: 2010-08-22
+
+two:
+  lname: MyString
+  fname: MyString
+  lname_yomi: MyString
+  fname_yomi: MyString
+  lname_eng: MyString
+  fname_eng: MyString
+  username: MyString
+  email: MyString
+  role: MyString
+  added_by: 1
+  locked: false
+  locked_reason: MyString
+  locked_date: 2010-08-22
+  log: MyText
+  type: MyString
+  passwd_encr: MyString
+  passwd_set: 2010-08-22
+  reset_passwd: false
+  last_login: 2010-08-22
+  active: false
+  inactive_reason: MyString
+  inactive_date: 2010-08-22

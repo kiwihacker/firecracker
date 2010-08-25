@@ -1,0 +1,28 @@
+<p>
+  <b>Entry:</b>
+  <%=h @image.entry_id %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%=h @image.image_url %>
+</p>
+
+<p>
+  <b>Image credit:</b>
+  <%=h @image.image_credit %>
+</p>
+
+<p>
+  <b>Image date:</b>
+  <%=h @image.image_date %>
+</p>
+
+<p>
+  <b>Image caption:</b>
+  <%=h @image.image_caption %>
+</p>
+
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>

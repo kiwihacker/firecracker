@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  role: MyString
+  role_j: MyString
+  desc: MyString
+  desc_j: MyString
+
+two:
+  role: MyString
+  role_j: MyString
+  desc: MyString
+  desc_j: MyString

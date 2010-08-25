@@ -1,0 +1,8 @@
+<h1>Dashboard</h1>
+
+<% @entries.each do |entry| -%>
+	<p>
+		<%=h entry.title %><br />
+		<%=h entry.blurb %>
+	</p>
+<% end %>

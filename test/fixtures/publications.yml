@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  pub_name: MyString
+  pub_name_yomi: MyString
+  pub_name_eng: MyString
+
+two:
+  pub_name: MyString
+  pub_name_yomi: MyString
+  pub_name_eng: MyString

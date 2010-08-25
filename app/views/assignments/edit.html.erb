@@ -1,0 +1,49 @@
+<h1>Editing assignment</h1>
+
+<% form_for(@assignment) do |f| %>
+  <%= f.error_messages %>
+
+  <% roles = Role.find(:all, :order => :role) %>
+  <% users = User.find(:all, :order => :username)%>
+  <% publications = Publication.find(:all, :order => :pub_name)%>
+
+  <p>
+    <%= f.label :role_id %><br />
+	<%= f.collection_select :role_id, roles, :id, :role %>
+  </p>
+
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.collection_select :user_id, users, :id, :username %>
+  </p>
+  <p>
+    <%= f.label :publication_id %><br />
+  	<%= f.collection_select :publication_id, publications, :id, :pub_name %>
+  </p>
+  <p>
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </p>
+  <p>
+    <%= f.label :assigned_date %><br />
+    <%= f.date_select :assigned_date %>
+  </p>
+  <p>
+    <%= f.label :deactivated_date %><br />
+    <%= f.date_select :deactivated_date %>
+  </p>
+  <p>
+    <%= f.label :deactivated_reason %><br />
+    <%= f.text_field :deactivated_reason %>
+  </p>
+  <p>
+    <%= f.label :assigned_by_user %><br />
+    <%= f.text_field :assigned_by_user %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @assignment %> |
+<%= link_to 'Back', assignments_path %>

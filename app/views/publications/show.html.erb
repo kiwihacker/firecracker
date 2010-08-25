@@ -1,0 +1,18 @@
+<p>
+  <b>Pub name:</b>
+  <%=h @publication.pub_name %>
+</p>
+
+<p>
+  <b>Pub name yomi:</b>
+  <%=h @publication.pub_name_yomi %>
+</p>
+
+<p>
+  <b>Pub name eng:</b>
+  <%=h @publication.pub_name_eng %>
+</p>
+
+
+<%= link_to 'Edit', edit_publication_path(@publication) %> |
+<%= link_to 'Back', publications_path %>

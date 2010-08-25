@@ -1,0 +1,106 @@
+<h1>Editing user</h1>
+
+<% form_for(@user) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :lname %><br />
+    <%= f.text_field :lname %>
+  </p>
+  <p>
+    <%= f.label :fname %><br />
+    <%= f.text_field :fname %>
+  </p>
+  <p>
+    <%= f.label :lname_yomi %><br />
+    <%= f.text_field :lname_yomi %>
+  </p>
+  <p>
+    <%= f.label :fname_yomi %><br />
+    <%= f.text_field :fname_yomi %>
+  </p>
+  <p>
+    <%= f.label :lname_eng %><br />
+    <%= f.text_field :lname_eng %>
+  </p>
+  <p>
+    <%= f.label :fname_eng %><br />
+    <%= f.text_field :fname_eng %>
+  </p>
+  <p>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :role %><br />
+    <%= f.text_field :role %>
+  </p>
+  <p>
+    <%= f.label :added_by %><br />
+    <%= f.text_field :added_by %>
+  </p>
+  <p>
+    <%= f.label :locked %><br />
+    <%= f.check_box :locked %>
+  </p>
+  <p>
+    <%= f.label :locked_reason %><br />
+    <%= f.text_field :locked_reason %>
+  </p>
+  <p>
+    <%= f.label :locked_date %><br />
+    <%= f.date_select :locked_date %>
+  </p>
+  <p>
+    <%= f.label :log %><br />
+    <%= f.text_area :log %>
+  </p>
+  <p>
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </p>
+  <p>
+    <%= f.label :passwd_set %><br />
+    <%= f.date_select :passwd_set %>
+  </p>
+  <p>
+    <%= f.label :reset_passwd %><br />
+    <%= f.check_box :reset_passwd %>
+  </p>
+  <p>
+    <%= f.label :last_login %><br />
+    <%= f.date_select :last_login %>
+  </p>
+  <p>
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </p>
+  <p>
+    <%= f.label :inactive_reason %><br />
+    <%= f.text_field :inactive_reason %>
+  </p>
+  <p>
+    <%= f.label :inactive_date %><br />
+    <%= f.date_select :inactive_date %>
+  </p>
+
+  <p>
+	<%= f.label :password, 'Password' %>
+	<%= f.password_field :password, :size => 40 %>
+  </p>
+  <p>
+	<%= f.label :password, 'Confirm' %>
+	<%= f.password_field :password_confirmation, :size => 40 %>
+  </p>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>

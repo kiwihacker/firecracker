@@ -1,0 +1,76 @@
+<h1>Editing entry</h1>
+
+<% form_for(@entry) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :blurb %><br />
+    <%= f.text_area :blurb %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.label :author_source %><br />
+    <%= f.text_field :author_source %>
+  </p>
+  <p>
+    <%= f.label :writer_id %><br />
+    <%= f.text_field :writer_id %>
+  </p>
+  <p>
+    <%= f.label :source_id %><br />
+    <%= f.text_field :source_id %>
+  </p>
+  <p>
+    <%= f.label :assigned_to %><br />
+    <%= f.text_field :assigned_to %>
+  </p>
+  <p>
+    <%= f.label :is_locked %><br />
+    <%= f.check_box :is_locked %>
+  </p>
+  <p>
+    <%= f.label :is_published %><br />
+    <%= f.check_box :is_published %>
+  </p>
+  <p>
+    <%= f.label :published_date %><br />
+    <%= f.date_select :published_date %>
+  </p>
+  <p>
+    <%= f.label :assigned_date %><br />
+    <%= f.date_select :assigned_date %>
+  </p>
+  <p>
+    <%= f.label :log %><br />
+    <%= f.text_area :log %>
+  </p>
+  <p>
+    <%= f.label :is_ok_to_publish %><br />
+    <%= f.check_box :is_ok_to_publish %>
+  </p>
+  <p>
+    <%= f.label :editor_id %><br />
+    <%= f.text_field :editor_id %>
+  </p>
+  <p>
+    <%= f.label :publisher_id %><br />
+    <%= f.text_field :publisher_id %>
+  </p>
+  <p>
+    <%= f.label :category_id %><br />
+    <%= f.text_field :category_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @entry %> |
+<%= link_to 'Back', entries_path %>

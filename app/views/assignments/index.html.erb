@@ -1,0 +1,40 @@
+<h1>Listing assignments</h1>
+
+<table>
+  <tr>
+    <th width="150" align="left">Publication</th>
+    <th width="100" align="left">Role</th>
+    <th width="100" align="left">User</th>
+    <th width="100" align="left">Active</th>
+    <th width="120" align="left">Assigned</th>
+    <th width="120" align="left">Assigned by</th>
+
+
+  </tr>
+
+<% @assignments.each do |assignment| %>
+  <tr>
+	
+	<!-- Pull a text field to usefully display ID values from assignment -->
+	<% @role = Role.find assignment.role_id %>
+	<% @user = User.find assignment.user_id %>
+	<% @pub = Publication.find assignment.publication_id %>
+
+    <td><%=h @pub.pub_name %></td>
+    <td><%=h @role.role %></td>
+    <td><%=h @user.username %></td>
+
+    <td><%=h assignment.active %></td>
+    <td><%=h assignment.assigned_date %></td>
+    <td><%=h assignment.assigned_by_user %></td>
+
+    <td><%= link_to 'Show', assignment %></td>
+    <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
+    <td><%= link_to 'Destroy', assignment, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New assignment', new_assignment_path %>

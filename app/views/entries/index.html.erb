@@ -1,0 +1,50 @@
+<h1>Listing entries</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Blurb</th>
+    <th>Body</th>
+    <th>Author source</th>
+    <th>Writer</th>
+    <th>Source</th>
+    <th>Assigned to</th>
+    <th>Is locked</th>
+    <th>Is published</th>
+    <th>Published date</th>
+    <th>Assigned date</th>
+    <th>Log</th>
+    <th>Is ok to publish</th>
+    <th>Editor</th>
+    <th>Publisher</th>
+    <th>Category</th>
+  </tr>
+
+<% @entries.each do |entry| %>
+  <tr>
+    <td><%=h entry.title %></td>
+    <td><%=h entry.blurb %></td>
+    <td><%=h entry.body %></td>
+    <td><%=h entry.author_source %></td>
+    <td><%=h entry.writer_id %></td>
+    <td><%=h entry.source_id %></td>
+    <td><%=h entry.assigned_to %></td>
+    <td><%=h entry.is_locked %></td>
+    <td><%=h entry.is_published %></td>
+    <td><%=h entry.published_date %></td>
+    <td><%=h entry.assigned_date %></td>
+    <td><%=h entry.log %></td>
+    <td><%=h entry.is_ok_to_publish %></td>
+    <td><%=h entry.editor_id %></td>
+    <td><%=h entry.publisher_id %></td>
+    <td><%=h entry.category_id %></td>
+    <td><%= link_to 'Show', entry %></td>
+    <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
+    <td><%= link_to 'Destroy', entry, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New entry', new_entry_path %>

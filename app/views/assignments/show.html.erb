@@ -1,0 +1,53 @@
+<!-- Pull a text field to usefully display ID values from assignment -->
+<% @role = Role.find @assignment.role_id %>
+<% @user = User.find @assignment.user_id %>
+<% @pub = Publication.find @assignment.publication_id %>
+
+
+<p>
+  <b>Role:</b>
+  <%=h @role.role %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @user.username %>
+</p>
+
+<p>
+  <b>Publication:</b>
+  <%=h @pub.pub_name %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%=h @assignment.active %>
+</p>
+
+<p>
+  <b>Assigned date:</b>
+  <%=h @assignment.assigned_date %>
+</p>
+
+<p>
+  <b>Assigned by user:</b>
+  <%=h @assignment.assigned_by_user %>
+</p>
+
+<!-- Only show if user has been deactivated -->
+<% if @assignment.active == false %>
+	<p>
+  		<b>Deactivated date:</b>
+  		<%=h @assignment.deactivated_date %>
+	</p>
+	<p>
+  		<b>Deactivated reason:</b>
+  		<%=h @assignment.deactivated_reason %>
+	</p>
+<% end %>
+
+
+
+
+<%= link_to 'Edit', edit_assignment_path(@assignment) %> |
+<%= link_to 'Back', assignments_path %>

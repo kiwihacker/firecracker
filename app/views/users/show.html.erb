@@ -1,0 +1,108 @@
+<p>
+  <b>Lname:</b>
+  <%=h @user.lname %>
+</p>
+
+<p>
+  <b>Fname:</b>
+  <%=h @user.fname %>
+</p>
+
+<p>
+  <b>Lname yomi:</b>
+  <%=h @user.lname_yomi %>
+</p>
+
+<p>
+  <b>Fname yomi:</b>
+  <%=h @user.fname_yomi %>
+</p>
+
+<p>
+  <b>Lname eng:</b>
+  <%=h @user.lname_eng %>
+</p>
+
+<p>
+  <b>Fname eng:</b>
+  <%=h @user.fname_eng %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%=h @user.username %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @user.email %>
+</p>
+
+<p>
+  <b>Role:</b>
+  <%=h @user.role %>
+</p>
+
+<p>
+  <b>Added by:</b>
+  <%=h @user.added_by %>
+</p>
+
+<p>
+  <b>Locked:</b>
+  <%=h @user.locked %>
+</p>
+
+<p>
+  <b>Locked reason:</b>
+  <%=h @user.locked_reason %>
+</p>
+
+<p>
+  <b>Locked date:</b>
+  <%=h @user.locked_date %>
+</p>
+
+<p>
+  <b>Log:</b>
+  <%=h @user.log %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @user.type %>
+</p>
+
+<p>
+  <b>Passwd set:</b>
+  <%=h @user.passwd_set %>
+</p>
+
+<p>
+  <b>Reset passwd:</b>
+  <%=h @user.reset_passwd %>
+</p>
+
+<p>
+  <b>Last login:</b>
+  <%=h @user.last_login %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%=h @user.active %>
+</p>
+
+<p>
+  <b>Inactive reason:</b>
+  <%=h @user.inactive_reason %>
+</p>
+
+<p>
+  <b>Inactive date:</b>
+  <%=h @user.inactive_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

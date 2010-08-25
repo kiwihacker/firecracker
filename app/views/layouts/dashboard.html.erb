@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+<head>
+  <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+  <meta http-equiv='content-language' content='en-us' />
+  <title>Publisher ASP Dashboard</title>
+  <%= stylesheet_link_tag "dashboard", :media => "all" %>
+  <script type='text/javascript'>
+    function setMenuItems() {
+	  var roleID = "<%= session[":role_id"] %>";
+	  var elem = document.getElementById('menu_products') ; 
+	  elem.style.display = 'none';
+ 	}
+  </script>
+</head>
+<body id="body" onload="setMenuItems()">
+  	<div id="banner">
+    	<%= image_tag("logo.png") %>
+    	<%= @page_title || "Welcome to your Dashboard" %>
+  	</div>
+  	<div id="columns">
+	  	<ul class="nav">
+			<%- roleID = session[:role_id] %>
+			<%- if roleID == 3 || roleID == 4 -%>
+      			<li id="menu_orders"><a href="http://www....">Orders</a></li>
+  			<% end %>
+			<%- if roleID == 3 || roleID == 4 -%>
+				<li id="menu_customers"><a href="http://www..../faq">Customers</a></li>
+  			<% end %>
+			<%- if roleID == 3 || roleID == 4 -%>
+				<li id="menu_products"><a href="http://www..../news">Products</a></li>
+	  		<% end %>
+			<%- if roleID == 2 || roleID == 3 -%>
+      			<li id="menu_articles"><a href="http://www..../contact">All Articles</a></li>
+	  		<% end %>
+			<%- if roleID == 1 || roleID == 2 || roleID == 3 -%>
+      			<li id="menu_myarticles"><a href="http://www..../contact">My Articles</a></li>
+	  		<% end %>
+			<%- if roleID == 1 || roleID == 2 || roleID == 3 -%>
+      			<li id="menu_myarticles"><a href="http://www..../contact">New Article</a></li>
+	  		<% end %>
+			<%- if session[:role_id] == 4 -%>
+      			<li id="menu_admin"><a href="http://www..../contact">Admin</a></li>
+	  		<% end %>
+			<%- if session[:role_id] == 5 -%>
+      			<li id="menu_contorl"><a href="http://www..../contact">ID Admin</a></li>
+	  		<% end %>
+		</ul>
+    	<div id="main">
+      		<%= yield :layout %>
+    	</div>
+  	</div>
+	<% if session[:publication_id] %>
+		<p><%=h session[:publication_id] %> <%=h session[:role_id] %> <%=h session[:user_id] %></p>
+	<% end %>
+</body>
+</html>

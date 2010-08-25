@@ -1,0 +1,36 @@
+<% if flash[:notice] -%>
+	<div id="notice"><%= flash[:notice] %></div>
+<% end -%>
+
+<div class="depot-form">
+  <% form_tag do %>
+
+
+
+    <fieldset>
+      <legend>Please Log In</legend>
+
+      <div>
+	  	<%= 
+			@pubs = Publication.find(:all)
+			select_tag(:publication_id, options_from_collection_for_select(@pubs, :id, :pub_name)) 
+		%>
+      </div>
+
+
+      <div>
+        <label for="username">Username:</label>
+        <%= text_field_tag :username, params[:username] %>
+      </div>
+
+      <div>
+        <label for="password">Password:</label>
+        <%= password_field_tag :password, params[:password] %>
+      </div>
+  
+      <div>
+        <%= submit_tag "Login" %>
+      </div>
+    </fieldset>
+  <% end %>
+</div>

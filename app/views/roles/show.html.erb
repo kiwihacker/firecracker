@@ -1,0 +1,23 @@
+<p>
+  <b>Role:</b>
+  <%=h @role.role %>
+</p>
+
+<p>
+  <b>Role j:</b>
+  <%=h @role.role_j %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%=h @role.desc %>
+</p>
+
+<p>
+  <b>Desc j:</b>
+  <%=h @role.desc_j %>
+</p>
+
+
+<%= link_to 'Edit', edit_role_path(@role) %> |
+<%= link_to 'Back', roles_path %>
